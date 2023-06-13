@@ -1,0 +1,318 @@
+body {
+  background: #2f2f31;
+  transform: rotateX(0.003deg);
+  height: 100vh;
+  color: #fff;
+}
+
+
+/* top is not used right now since the position is relative, 
+use the percentages to place it exactly where you want. */
+.reg_button {
+  position: relative;
+  left: 50%;
+  top: 30%;
+  transform: translate(-35%, 0%);
+  color: #11998e;
+  text-decoration: none;
+  font-size: 1em;
+  display: inline-block;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  padding: 0.5em 2em;
+  border: 2px solid #11998e;
+  transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.reg_button::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #11998e;
+  transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+  z-index: -1;
+}
+.reg_button::after {
+  content: "";
+  display: inline-block;
+  background-image: url("https://cdn-icons-png.flaticon.com/128/109/109617.png");
+  position: absolute;
+  top: 0;
+  left: calc(100% - 3em);
+  right: 3em;
+  bottom: 0;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.reg_button:hover {
+  padding: 0.5em 3.5em 0.5em 0.5em;
+}
+.reg_button:hover::before {
+  left: calc(100% - 3em);
+  right: 0;
+  transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+.reg_button:hover::after {
+  right: 0;
+  transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 4vh;
+  width: 30%;
+  left: -3%;
+}
+
+.form__group_delete {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 40%;
+  left: 20%;
+}
+
+.form__group_graph {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 40%;
+  left: 20%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #11998e;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #11998e;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+
+.form__field_delete {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #991111;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #c21e1e;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field_graph {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #5c5c5c;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #000000;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field_delete::placeholder {
+  color: transparent;
+}
+
+.form__field_graph::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 18px;
+}
+
+.form__field_delete:placeholder-shown ~ .form__label_delete {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 18px;
+}
+
+.form__field_graph:placeholder-shown ~ .form__label_graph {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 18px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+}
+
+.form__label_delete {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #c21e1e;
+}
+
+.form__label_graph {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.form__field:focus {
+  padding-bottom: 7px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+
+/* Handles the delete ticker portion of the text box and button */
+
+.form__field_delete:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #c21e1e, #ef3838);
+  border-image-slice: 1;
+}
+.form__field_delete:focus ~ .form__label_delete {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #c21e1e;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field_delete:required, .form__field_delete:invalid {
+  box-shadow: none;
+}
+
+.button_delete {
+  color: #c21e1e;
+  border: 2px solid #c21e1e;
+}
+.button_delete::before {
+  background: #c21e1e;
+}
+
+.button_graph {
+  color: #5c5c5c;
+  border: 2px solid #000000;
+}
+.button_graph::before {
+  background: #000000;
+}
+
+/* Handles the graph portion of the text box and button */
+
+.form__field_graph:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #000000, #5c5c5c);
+  border-image-slice: 1;
+}
+.form__field_graph:focus ~ .form__label_graph {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field_graph:required, .form__field_graph:invalid {
+  box-shadow: none;
+}
+
+h2.profHeader {
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #11998e, #38ef7d);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+  /* background-color: black; */
+}
+
+.mainHr{
+  border: 0;
+  height: 6px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.981), rgba(0, 0, 0, 0));
+}
+
+.helloUser {
+  position: absolute;
+  top: 2.5%;
+  left: 2%;
+  font-weight: 900;
+  font-size: larger;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 34%;
+  font-weight: 900;
+  color: rgb(35, 35, 35);
+}
+
+.messageTick{
+  position: absolute;
+  top: 63%;
+  left: 8%;
+  width: 50%;
+  font-weight: 900;
+  color: rgb(35, 35, 35);
+  font-size: 2em;
+  text-align: center;
+}

@@ -1,0 +1,45 @@
+div.shell {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    background-color: rgb(35, 35, 35);
+    left: 70%;
+    top: 14%;
+    height: 86vh;
+    min-width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: rgb(197, 197, 197);
+}
+
+span.watchlist {
+    font-size: 1.8em;
+}
+
+.shell-inner {
+    position: flex;
+    flex-direction: column;
+}
+
+.ticker {
+    width: 100%;
+}
+
+.ticker:hover, .ticker:focus .ticker:active{
+    background: #13a818;    
+    width: 100%;
+    cursor: pointer;
+}
+
+.line {
+    z-index:-1;
+    opacity: 1;
+    height: 1.3em;
+    /* height: 16px; */
+    color: white;
+    border-top: 5px double white;
+}

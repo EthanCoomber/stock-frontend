@@ -1,0 +1,132 @@
+/* * BEGIN: Non Openmrs CSS * */
+/* @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+	font-family: "Roboto";
+} */
+
+h1{
+	padding: 2%;
+	font-size: 10px;
+	text-align: center;
+	background-image:
+		linear-gradient(
+		to bottom, 
+		white, 
+		white,  
+		rgb(185, 236, 185),
+		rgb(144, 238, 144),
+		lightgreen
+		);
+	height: 10%;
+}
+
+div.bucket {
+	height: 100vh;
+}
+
+div.container {
+	position: absolute;
+	font-size: 24px;
+	top: 8%;
+	left: 10%;
+	margin-top: 30px;
+	border: .5em solid #121212;
+	border-radius: 8px;
+	height: 80%;
+	width: 80%;
+	background-color: white;
+}
+
+div.filler {
+	position:absolute;
+	top: 10%;
+	height: 90%;
+	width: 100%;
+	background-color: lightgreen;
+}
+
+input{
+	font-size: large;
+	position: absolute;
+	width: 30%;
+	top: 45%;
+	left: 35%;
+	text-align: center;
+	margin: 15px;
+	background-color: rgb(185, 236, 185);
+	border-radius: 8px;
+	transition: background-color .5s;
+}
+
+input:focus {
+	outline-color: black;
+	background-color: #e4e4e4;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}
+
+/* CSS */
+.button-38 {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position:absolute;
+  top: 58%;
+  left: 43.5%;
+  min-width: 13%;
+}
+
+.button-38:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-38:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible {
+  box-shadow: none;
+}
+
+.button-2 {
+	background-color: rgb(35, 35, 35);
+	top: 4%;
+	left: 83.5%;
+	color: white;
+}
+
+.button-2:hover {
+	background-color: rgb(63, 63, 63);
+}
+
+.button-3 {
+	background-color: #fd7474;
+	top: 8%;
+	left: 2%;
+	height: 1em;
+	font-size: .7em;
+	font-weight: 800;
+	line-height: 0%;
+}
+
+.button-3:hover {
+	background-color: #ff4c4c;
+}
