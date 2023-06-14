@@ -10,6 +10,7 @@ const POST = '/post';
 class UserService {
 
     addUser(user) {
+      console.log(user)
       try {
         axios.post(base + POST, user)
       } catch (error) {
@@ -33,9 +34,10 @@ class UserService {
     
     async addTicker(ticker, userId) {
       console.log(ticker)
-        let url = "/" + userId + "/insert?ticker=" + ticker;
+        let url = base + "/" + userId + "/insert?ticker=" + ticker;
+        console.log(url)
         try {
-            await axios.post(base + url, null)
+            await axios.post(url, null)
           } catch (error) {
             console.error(error.response.data); 
           }
